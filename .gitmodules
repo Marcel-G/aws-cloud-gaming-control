@@ -1,0 +1,3 @@
+[submodule "aws-cloud-gaming"]
+	path = aws-cloud-gaming
+	url = git@github.com:Marcel-G/aws-cloud-gaming.git
