@@ -11,7 +11,6 @@ Built on-top of [aws-cloud-gaming](https://github.com/badjware/aws-cloud-gaming)
 
 # Set the desired region and create the infra 
 echo 'region = "us-east-1"' >terraform.tfvars
-git submodule init
 terraform init
 
 ./scripts/start.sh
