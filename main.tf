@@ -3,7 +3,7 @@ provider "aws" {
 }
 
 module "aws_cloud_gaming" {
-  source = "./aws-cloud-gaming"
+  source = "github.com/Marcel-G/aws-cloud-gaming"
   region = var.region
   allowed_availability_zone_identifier = var.allowed_availability_zone_identifier
   instance_type = var.instance_type
@@ -16,6 +16,8 @@ module "aws_cloud_gaming" {
   install_uplay = var.install_uplay
   install_origin = var.install_origin
   install_epic_games_launcher = var.install_epic_games_launcher
+
+  resource_name = "cloud-gaming-${terraform.workspace}"
 
   custom_ami = var.custom_ami
   skip_install = var.skip_install
