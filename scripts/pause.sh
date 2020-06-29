@@ -10,7 +10,7 @@ else
     -target=aws_ami_from_instance.paused_instance_ami \
     -var "running_instance_id=$instance_id" && \
   terraform destroy \
-    -target=aws_spot_instance_request.windows_instance \
+    -target=module.aws_cloud_gaming \
     -force && \
   echo "Pause succesful" || \
   echo "Pause failed"
