@@ -16,9 +16,8 @@ Built on-top of [aws-cloud-gaming](https://github.com/badjware/aws-cloud-gaming)
 ``` bash
 # Assuming terraform, bash, curl, and aws credentials are installed
 
-# Set the desired region and create the infrastructure.
-# You can find the closest data center with https://www.cloudping.info
-echo 'region = "us-east-1"' >> terraform.tfvars
+# Set the desired region. You can find the closest data center with https://www.cloudping.info.
+# echo 'region = "us-east-1"' >> terraform.tfvars
 
 # Configure desired instance type
 echo 'instance_type = "g4dn.xlarge"' >> terraform.tfvars
@@ -56,3 +55,7 @@ That means you can destroy them independently from each-other
 ```
 terraform workspace new rocket-league
 ```
+
+## Troubleshooting
+
+- If you encounter **MaxSpotInstanceCountExceeded** error, review your accounts [spot instance limits](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-spot-limits.html#spot-limits-general)
