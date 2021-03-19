@@ -1,6 +1,6 @@
 terraform refresh
 
-instance_id=$(terraform output instance_id 2>/dev/null)
+instance_id=$(terraform output -raw instance_id 2>/dev/null)
 
 if [ -z "$instance_id" ]
 then

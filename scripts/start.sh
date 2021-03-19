@@ -1,6 +1,6 @@
 terraform refresh
 
-paused_instance_ami=$(terraform output paused_instance_ami 2>/dev/null)
+paused_instance_ami=$(terraform output -raw paused_instance_ami 2>/dev/null)
 
 if [[ "$paused_instance_ami" == "ami-"* ]]
 then
